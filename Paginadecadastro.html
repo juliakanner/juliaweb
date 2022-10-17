@@ -1,95 +1,82 @@
 <doctype html> 
-
+<html>
+    <head>
+        <meta charset="utf-8"/>
+            <script type="text/javascript">
+                function validar() {
+                    var nome = formulario.nome;
+                    var email = formulario.email;
+    
+                    if (nome.value == "") {
+                        window.alert("Nome não informado!");
+                        nome.focus();
+                    }
+                    else if (email.value == "") {
+                        window.alert("Email não informado!");
+                        email.focus();
+                    }
+                    else {
+                        alert("Mandou bem cara!");
+                        nome = "";
+                        email = "";
+                    }
+                }
+            </script>
+            <style>
+            body {
+            font-family: arial;
+            background-color: rgb(99, 192, 99);
+            }
+            /* Definindo o tamanho do formulário */
+            #area { 
+            position: relative;
+            left: 37%;
+            top: 29%;
+            width: 320 px;
+            height: 270 px;
+            }
+            #area {
+            position: absolute;
+            display: block;
+            }
+            /* Fazendo a linha em volta */
+            fildset {
+            width: 300 px;
+            heigth: 280 px;
+            }
+            /* Definindo o tamanho dos inputs */
+            #formulario input.campo-nome {
+            position: absolute;
+            left: 95 px;
+            top: 26 px;
+            width: 225 px;
+            background-color: rgb(119, 46, 34);
+            }
+            #formulario input.campo-email {
+            position: absolute;
+            left: 95 px;
+            margin-top: 2 px;
+            width: 225 px;
+            background-color: rgb(192, 97, 59);
+            }
+            /* Colocando o botão na direita */
+            input.btn-submit {
+            position: absolute;
+            right: 10px;
+            background-color: rgb(224, 224, 50);
+            }
+            </style>
+    </head>
     <body>
-    <div id = "area">
-    <form name="formulario">
-    <fieldset>
-    <legend> Formulário </legend>
-    Nome: <input type = "text" class = "name" required><br>
-    Email: <input type = "text" class = "email" required><br>
-    <input type = "submit" value = "Enviar" onclick="validar()" class = "submit">
-    </fieldset>
-    <script type="text/javascript">
-        function validar() {
-            var nome = formulario.nome;
-            var email = formulario.email;
-    
-            if (nome.value == "") {
-                window.alert("Nome não informado!");
-                nome.focus();
-            }
-            else if (email.value == "") {
-                window.alert("Email não informado!");
-                email.focus();
-            }
-            else {
-                alert("Mandou bem cara!");
-                nome = "";
-                email = "";
-            }
-        }
-    </script>
-    </form>
-    </div>
-    </body>
-    </html>
-    <doctype html>
-        <style>
-        body {
-        font-family: arial;
-        background-color: rgb(99, 192, 99);
-        }
-        /* Definindo o tamanho do formulário */
-        #area { 
-        position: relative;
-        left: 37%;
-        top: 29%;
-        width: 320 px;
-        height: 270 px;
-        }
-        #area {
-        position: absolute;
-        display: block;
-        }
-        /* Fazendo a linha em volta */
-        fildset {
-        width: 300 px;
-        heigth: 280 px;
-        }
-        /* Definindo o tamanho dos inputs */
-        #formulario input. campo-nome {
-        position: absolute;
-        left: 95 px;
-        top: 26 px;
-        width: 225 px;
-        background-color: rgb(119, 46, 34);
-        }
-        #formulario campo.email {
-        position: absolute;
-        left: 95 px;
-        margin-top: 2 px;
-        width: 225 px;
-        background-color: rgb(192, 97, 59);
-        }
-        background-color: yellow;
-        /* Colocando o botão na direita */
-        input.btn-submit {
-        position: absolute;
-        rigth: 10 px;
-        background-color: rgb(224, 224, 50);
-        }
-        </style>
-        <body>
         <div id = "area">
-        <form action="index.html">
-        <fieldset>
-        <legend> Formulário </legend>
-        Nome: <input type = "text" class = "campo.name" required><br>
-        Email: <input type = "text" class = "campo.email" required><br>
-        <input type = "submit" value = "Enviar" class = "submit">
-        </fieldset>
-        </form>
+            <form action="index.html">
+                <fieldset>
+                    <legend> Formulário </legend>
+                    Nome: <input type = "text" class = "campo-name" required><br>
+                    Email: <input type = "text" class = "campo-email" required><br>
+                    <input type = "submit" value = "Enviar" class = "submit">
+                </fieldset>
+            </form>
         </div>
-        </body>
-        </html>
-    
+    </body>
+</html>
